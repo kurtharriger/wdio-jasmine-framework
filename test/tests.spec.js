@@ -58,7 +58,7 @@ describe('JasmineAdapter', () => {
             global.browser = new WebdriverIO()
             global.browser.options = { sync: false }
             const adapter = new JasmineAdapter(0, {}, asyncSpecs, {});
-            (await adapter.run()).should.be.equal(0, 'actual test failed')
+            (await adapter.run()).should.be.equal(1, 'actual test failed')
         })
 
         it('should run async commands in beforeEach blocks', () => {

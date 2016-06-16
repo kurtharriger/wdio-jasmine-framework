@@ -25,6 +25,12 @@ describe('sample test', () => {
         })
     })
 
+    it('fail', () => {
+        return browser.command().then((result) => {
+            expect(true).toBe(false)
+        })
+    })
+
     describe('nested', () => {
         it('bar', () => {
             const start = new Date().getTime()
